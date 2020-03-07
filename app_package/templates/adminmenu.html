@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu Page For Demo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  justify-content: center;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  
+}
+body{
+    background-image: url('/static/images/1.jpg');
+}
+    </style>
+<body>
+    <div>
+        
+        <h3>Welcome to CRM Management</h3>
+    </div>
+    <div></div>
+    <div></div>
+    <div class="col-2">
+        <form action="{{url_for('enquiry_home')}}">
+        <div><button class="button button2" type="submit">Enquiry Management</button>
+        </form>
+        <div>
+        <button class="button button2">Admission Management</button></div>
+        <div><button class="button button2">Course  Management</button>
+        <button class="button button2">Batch Management</button></div>
+        <div><button class="button button2">Resourse Management</button></div>
+    </div>
+    
+</body>
+</html>
+{% endblock %}
