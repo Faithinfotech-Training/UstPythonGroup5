@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 <fieldset>
 <legend>FAITH INFOTECH</legend>
-<table class="table table-bordered">
+<table >
     <tr>
         <th>Id</th>
         <th>Coursename</th>
@@ -31,5 +29,5 @@
 </table>
 </fieldset>
 <p><a href="{{url_for('add_course')}}">Add Course</a></p>
-<p><a href="{{url for ('display_course')}}">Display Course</a></p>
+
 {% endblock %}

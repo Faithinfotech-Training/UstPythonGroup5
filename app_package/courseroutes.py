@@ -1,14 +1,11 @@
 from flask import render_template, flash, redirect, url_for
 from app_package import app, db, mongo
 
-from app_package.forms import AddCourseForm,ModifyCourseForm
+from app_package.courseforms import AddCourseForm,ModifyCourseForm
 
 course_id=0
 check=True
-@app.route("/")  
 
-def menu():
-    return redirect("display_course")
 
 
 @app.route("/add_course",methods=["GET","POST"])
