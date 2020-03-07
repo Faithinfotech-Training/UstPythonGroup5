@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<fieldset> 
+    <legend>><h1>DISPLAY RESOURCES</h1></legend>
+    <form method="POST" action="{{url_for('add_resource')}}">
+     <table>
+        <tr>
+            <th>RESOURCE ID</th>
+            <th>RESOURCE NAME</th>
+            <th>RESOURCE CAPACITY</th>
+            <th>RESOURCE STATUS</th>
+            <th>RESOURCE RENT</th>
+            <th>TYPE OF USE</th>
+            <th>ACTION</th>
+        </tr>
+        {% for r in resources %}
+            <tr>
+                <td>{{r._id}}</td>
+                <td>{{r.res_name}}</td>
+                <td>{{r.res_capacity}}</td>
+                <td>{{r.res_status}}</td>
+                <td>{{r.res_rent}}</td>
+                <td>{{r.type_of_use}}</td>
+                <td><a href="{{url_for('update_resource',i=r._id)}}">update</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</fieldset>
+    <p><Button type ="submit">Add resources</p>
+{% endblock %}
+
+
+
