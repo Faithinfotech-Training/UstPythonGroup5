@@ -7,10 +7,6 @@ from app_package.resource_forms import AddResourceForm,UpdateResourceForm
 check=True
 res_id=0
 
-@app.route("/",methods=["GET","POST"])
-def index():
-    return redirect(url_for("view_resource"))
-
 @app.route("/add_resource",methods=["GET","POST"])
 def add_resource():
     global check,res_id
